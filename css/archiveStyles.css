@@ -225,7 +225,7 @@ a {
 	font-family: "open sans condensed";
 	text-align: center;
 	width: 100%;
-	transition: all 0.3s ease;
+	transition: all 0.5s ease;
 }
 
 .mob-home,

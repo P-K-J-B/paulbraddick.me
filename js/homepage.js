@@ -1,6 +1,6 @@
 const burgerMenu = document.querySelector('.burger-menu');
 const mobNav = document.querySelector('#mob-nav');
-const up = document.querySelector('.up');
+const up = document.querySelector('.hide-menu');
 const navOverlay = document.querySelector('.nav-overlay');
 const navBkg = document.querySelector('.nav-bkg');
 const page = document.querySelector('.container');
@@ -58,11 +58,11 @@ function changeHero() {
 	}
 
 	if (heroInt == 0) {
-		heroLink.href = 'pages/dare-ye-delve/index.html';
+		heroLink.href = 'pages/dare-ye-delve/';
 		slide1.style.cssText = 'opacity: 1';
 		slide2.style.cssText = 'opacity: 0.3';
 	} else {
-		heroLink.href = 'pages/memory-game/index.html';
+		heroLink.href = 'pages/memory-game/';
 		slide1.style.cssText = 'opacity: 0.3';
 		slide2.style.cssText = 'opacity: 1';
 	}

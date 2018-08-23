@@ -1,6 +1,6 @@
 const burgerMenu = document.querySelector('.burger-menu');
 const mobNav = document.querySelector('#mob-nav');
-const up = document.querySelector('.up');
+const up = document.querySelector('.hide-menu');
 const navOverlay = document.querySelector('.nav-overlay');
 const navBkg = document.querySelector('.nav-bkg');
 const page = document.querySelector('.container');
