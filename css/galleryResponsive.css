@@ -1,0 +1,118 @@
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 481px) {
+	body, html {
+		overflow: auto;
+	}
+
+	.footer p {
+		margin: 1em;
+	}
+}
+
+@media screen and (min-width: 481px) {
+	#nav {
+		margin-top: 0;
+	}
+
+	.burger-menu {
+		margin-right: -50px;
+	}
+}
+
+@media screen and (min-width: 641px) {
+	.container {
+		height: 875px;
+	}
+
+	.grid-cell {
+		position: relative;
+		width: 33.33%;
+		height: 225px;
+	}
+
+	.img {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0.4em;
+	}
+
+	.gallery-nav {
+		position: absolute;
+		top: 775px;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.home,
+	.about,
+	.archive {
+		font-size: 1em;
+	}
+
+	.container {
+		width: 930px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.header-inner {
+		width: 900px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.header-logo {
+		height: 81px;
+		width: 81px;
+	}
+
+	.header-title {
+		padding-top: 0.6em;
+		font-size: 1.8em;
+		transition: all 0.3s ease;
+		padding-right: 0em;
+	}
+
+	.header-desc {
+		padding-bottom: 1em;
+		font-size: 1em;
+		transition: all 0.3s ease;
+		padding-right: 0em;
+	}
+
+	.gallery-title {
+		margin-top: 0.8em;
+		margin-bottom: 0.4em;
+	}
+
+	.info {
+		margin-bottom: 0.3em;
+	}
+
+	.gallery-nav {
+		top: 820px;
+	}
+}
+
+@media screen and (orientation: portrait) and (max-width: 601px) {
+	.popup {
+		margin-top: 20%;
+		max-width: 100%;
+	}
+}
+
+@media screen and (orientation: landscape) and (max-height: 481px) {
+	.popup {
+		max-width: 80%;
+	}
+}

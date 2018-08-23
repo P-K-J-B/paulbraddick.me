@@ -1,0 +1,435 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: sans-serif;
+	background-color: #f5f5f5;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+#wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+/*
+ *
+ OVERLAY 
+ _____________________________________________________
+ * 
+ */
+
+.overlay {
+	visibility: hidden;
+	opacity: 0;
+	z-index: 11;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s ease;
+}
+
+.overlay-bkg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.popup {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: white;
+	border-radius: 10px;
+	max-width: 1320px;
+	max-height: 100%;
+	border: 0.5em solid white;
+	overflow-y: auto;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.popup img {
+	width: 100%;
+}
+
+.cross {
+	z-index: 1;
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	color: #fff;
+	opacity: 0.5;
+	font-size: 2em;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.cross:hover {
+	opacity: 1;
+}
+
+.left-arrow {
+	z-index: 1;
+	opacity: 0.5;
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	right: 100px;
+	margin: auto;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	transform: translateX(5px);
+	transition: all 0.3s ease;
+}
+
+.right-arrow {
+	z-index: 1;
+	opacity: 0.5;
+	position: absolute;
+	bottom: 5%;
+	left: 100px;
+	right: 0;
+	margin: auto;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	transform: translateX(-5px);
+	transition: all 0.3s ease;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+	opacity: 1;
+	transform: translateX(0px);
+}
+/*
+ *
+ HEADER
+ _____________________________________________________
+ * 
+ */
+
+.header {
+	z-index: 10;
+	width: 100%;
+	min-height: 50px;
+	background-color: white;
+	border-bottom: 1px solid black;
+}
+
+.header a {
+	color: #000;
+}
+
+.header-inner {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.header-logo {
+	float: left;
+	flex: 1;
+	margin-top: 0.3em;
+	margin-left: 0.4em;
+	vertical-align: top;
+	height: 50px;
+	width: 50px;
+	transition: all 0.3s ease;
+}
+
+.burger-menu {
+	float: right;
+	flex: 3;
+	margin-top: 13px;
+	margin-right: 12px;
+	margin-left: 7px;
+	vertical-align: top;
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.name {
+	display: inline-block;
+}
+
+.header-title {
+	font-size: 1.3em;
+	padding-top: 0.4em;
+	padding-right: 0.3em;
+	text-align: right;
+	flex: 2;
+	transition: all 0.3s ease;
+}
+
+.header-desc {
+	font-family: "open sans condensed";
+	letter-spacing: 0.1em;
+	font-size: 0.7em;
+	padding-top: 0.2em;
+	padding-bottom: 0.9em;
+	padding-right: 0.6em;
+	text-align: right;
+	transition: all 0.3s ease;
+}
+
+/*
+ *
+ NAVIGATION 
+ _____________________________________________________
+ * 
+ */
+
+.nav-overlay {
+	z-index: 5;
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.nav-bkg {
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	transition: all 0.5s ease;
+}
+
+#nav {
+	display: flex;
+	flex-wrap: wrap;
+	font-family: "open sans condensed";
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid black;
+	margin-top: -32px;
+	transition: all 1s ease;
+}
+
+.home,
+.about,
+.archive {
+	width: 33%;
+	color: #000;
+	font-size: 0.8em;
+	letter-spacing: 0.3em;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	transition: all 1s ease;
+}
+
+#mob-nav {
+	z-index: 10;
+	position: absolute;
+	top: 0px;
+	font-family: "open sans condensed";
+	text-align: center;
+	width: 100%;
+	transition: all 1s ease;
+}
+
+.mob-home,
+.mob-about,
+.mob-archive {
+	color: #000;
+	border-bottom: 1px solid black;
+	box-sizing: border-box;
+	letter-spacing: 0.3em;
+	padding-top: 0.5em;
+	background-color: #f5f5f5;
+	height: 40px;
+}
+
+.hide-menu {
+	height: 40px;
+	border-bottom: 1px solid black;
+	box-sizing: border-box;
+	background-color: white;
+}
+
+.up {
+	padding-top: 0.4em;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+
+.hide {
+	transform: translateY(-100%);
+}
+/*
+ *
+ MAIN 
+ _____________________________________________________
+ * 
+ */
+
+ #content {
+ 	background-color: #f5f5f5;
+ 	min-height: 100%;
+ 	padding-bottom: 87px;
+ }
+
+.container {
+	position: relative;
+	overflow: hidden;
+	transition: all 0.5s ease;
+}
+
+.info {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	min-height: 84px;
+	max-width: 95%;
+	text-align: center;
+	justify-content: center;
+}
+
+.info p {
+	font-size: 0.9em;
+	margin-bottom: 0.3em;
+	line-height: 1.2em;
+}
+
+.gallery-title {
+	margin-top: 0.6em;
+	margin-bottom: 0.2em;
+	letter-spacing: 0.1em;
+}
+
+.grid-cell {
+	opacity: 0;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	transform: translateY(20px);
+	background-color: #f5f5f5;
+	cursor: pointer;
+	transition: all 0.8s ease;
+}
+
+.img {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0.4em;
+	background-size: cover;
+	background-position: 50% 0%;
+	transition: all 0.5s ease;
+}
+
+.img:hover {
+	transform: scale(0.97);
+}
+
+.gallery-nav {
+	width: 100%;
+	height: 45px;
+	text-align: center;
+	letter-spacing: 0em;
+	transition: all 0.5s ease;
+}
+
+.page-no {
+	margin-left: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.page-no:hover {
+	text-decoration: underline;
+}
+
+.page-left {
+	opacity: 0.5;
+	position: relative;
+	top: 8px;
+	right: 15px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	transform: translateX(5px);
+	transition: all 0.3s ease;
+}
+
+.page-right {
+	opacity: 0.5;
+	position: relative;
+	top: 8px;
+	left: 15px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	transform: translateX(-5px);
+	transition: all 0.3s ease;
+}
+
+.page-left:hover,
+.page-right:hover {
+	opacity: 1;
+	transform: translateX(0px);
+}
+
+.disabled {
+	pointer-events: none;
+}
+
+/*
+ *
+ FOOTER 
+ _____________________________________________________
+ * 
+ */
+
+#footer {
+	position: relative;
+	height: 87px;
+	width: 100%;
+	background-color: #fff;
+	border-top: 1px solid black;
+	text-align: center;
+	font-family: "open sans condensed";
+	letter-spacing: 0.3em;
+	margin-top: -87px;
+	clear: both;
+	box-sizing: border-box;
+	transform: translateY(100%);
+	transition: all 1s ease;
+}
+
+#footer a {
+	color: #000;
+}
+
+#footer p {
+	margin-top: 2em;
+	transition: all 1s ease;
+}

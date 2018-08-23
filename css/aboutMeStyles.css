@@ -1,0 +1,323 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	height: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	background-color: #f5f5f5;
+}
+
+a {
+	color: #2c2c2c;
+	text-decoration: none;
+}
+
+#wrapper {
+	min-height: 100%;
+}
+
+
+/*
+ *
+ HEADER
+ _____________________________________________________
+ * 
+ */
+
+.header {
+	z-index: 10;
+	width: 100%;
+	min-height: 50px;
+	background-color: white;
+	border-bottom: 1px solid black;
+}
+
+.header a {
+	color: #000;
+}
+
+.header-inner {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.header-logo {
+	float: left;
+	flex: 1;
+	margin-top: 0.3em;
+	margin-left: 0.4em;
+	vertical-align: top;
+	height: 50px;
+	width: 50px;
+	transition: all 0.3s ease;
+}
+
+.burger-menu {
+	float: right;
+	flex: 3;
+	margin-top: 13px;
+	margin-right: 12px;
+	margin-left: 7px;
+	vertical-align: top;
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.name {
+	display: inline-block;
+}
+
+.header-title {
+	font-size: 1.3em;
+	padding-top: 0.4em;
+	padding-right: 0.3em;
+	text-align: right;
+	flex: 2;
+	transition: all 0.3s ease;
+}
+
+.header-desc {
+	font-family: "open sans condensed";
+	letter-spacing: 0.1em;
+	font-size: 0.7em;
+	padding-top: 0.2em;
+	padding-bottom: 0.9em;
+	padding-right: 0.6em;
+	text-align: right;
+	transition: all 0.3s ease;
+}
+
+/*
+ *
+ NAVIGATION 
+ _____________________________________________________
+ * 
+ */
+
+.nav-overlay {
+	z-index: 5;
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.nav-bkg {
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	transition: all 0.5s ease;
+}
+
+#nav {
+	display: flex;
+	flex-wrap: wrap;
+	font-family: "open sans condensed";
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid black;
+	margin-top: -32px;
+	transition: all 1s ease;
+}
+
+.home,
+.about,
+.archive {
+	width: 33%;
+	color: #000;
+	font-size: 0.8em;
+	letter-spacing: 0.3em;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	transition: all 1s ease;
+}
+
+#mob-nav {
+	z-index: 10;
+	position: absolute;
+	top: 0px;
+	font-family: "open sans condensed";
+	text-align: center;
+	width: 100%;
+	transition: all 1s ease;
+}
+
+.mob-home,
+.mob-about,
+.mob-archive {
+	color: #000;
+	border-bottom: 1px solid black;
+	box-sizing: border-box;
+	letter-spacing: 0.3em;
+	padding-top: 0.5em;
+	background-color: #f5f5f5;
+	height: 40px;
+}
+
+.hide-menu {
+	height: 40px;
+	border-bottom: 1px solid black;
+	box-sizing: border-box;
+	background-color: white;
+}
+
+.up {
+	padding-top: 0.4em;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+
+.hide {
+	transform: translateY(-100%);
+}
+
+/*
+ *
+ MAIN 
+ _____________________________________________________
+ * 
+ */
+
+#content {
+ 	min-height: 100%;
+ 	padding-bottom: 87px;
+}
+
+.container {
+	opacity: 0;
+	transform: translateY(20px);
+	overflow: hidden;
+	justify-content: center;
+	transition: all 0.5s ease;
+}
+
+.me {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 335px;
+	height: 100%;
+	max-height: 335px;
+	transform: scale(0);
+	transition: all 2s ease;
+}
+
+.me img {
+	width: 100%;
+	height: 100%;
+}
+
+.desc {
+	text-align: center;
+	max-width: 95%;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	margin-bottom: 10px;
+}
+
+.social-media {
+	display: flex;
+	height: 90px;
+	width: 100%;
+	max-width: 700px;
+}
+
+.linkedin {
+	position: absolute;
+	top: 20px;
+	right: 0px;
+	left: 15px;
+	margin: auto;
+	height: 40px;
+	transition: all 0.5s ease;
+}
+
+.linkedin img {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+}
+
+.linkedin p {
+	position: absolute;
+	top: 12px;
+	left: 53px;
+}
+
+.facebook {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	left: 0px;
+	margin: auto;
+	height: 40px;
+	transition: all 0.5s ease;
+}
+
+.facebook img {
+	position: absolute;
+	right: 87px;
+	width: 40px;
+	height: 40px;
+}
+
+.facebook p {
+	position: absolute;
+	top: 12px;
+	right: 0px;
+}
+
+.social1,
+.social2 {
+	position: relative;
+	height: 100px;
+	width: 50%;
+}
+
+
+/*
+ *
+ FOOTER 
+ _____________________________________________________
+ * 
+ */
+
+#footer {
+	position: relative;
+	height: 87px;
+	width: 100%;
+	background-color: #fff;
+	border-top: 1px solid black;
+	text-align: center;
+	font-family: "open sans condensed";
+	letter-spacing: 0.3em;
+	margin-top: -87px;
+	clear: both;
+	box-sizing: border-box;
+	transition: all 1s ease;
+}
+
+#footer a {
+	color: #000;
+}
+
+#footer p {
+	margin-top: 2em;
+	transition: all 1s ease;
+}

@@ -1,0 +1,81 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 481px) {
+	body, html {
+		overflow: auto;
+	}
+
+	.footer p {
+		margin: 1em;
+	}
+}
+
+@media screen and (min-width: 481px) {
+	#nav {
+		margin-top: 0;
+	}
+
+	.burger-menu {
+		margin-right: -50px;
+	}
+
+	.desc {
+		max-width: 700px;
+	}
+
+	.facebook {
+		right: 10px;
+	}
+
+	.linkedin {
+		left: 25px;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.home,
+	.about,
+	.archive {
+		font-size: 1em;
+	}
+
+	.container {
+		width: 900px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.header-inner {
+		width: 900px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.header-logo {
+		height: 81px;
+		width: 81px;
+	}
+
+	.header-title {
+		padding-top: 0.6em;
+		font-size: 1.8em;
+		transition: all 0.3s ease;
+		padding-right: 0em;
+	}
+
+	.header-desc {
+		padding-bottom: 1em;
+		font-size: 1em;
+		transition: all 0.3s ease;
+		padding-right: 0em;
+	}
+}
+
+@media screen and (orientation: landscape) and (max-height: 481px) {
+	body, html {
+		overflow: auto;
+	}
+}
