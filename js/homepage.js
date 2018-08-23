@@ -58,7 +58,7 @@ function changeHero() {
 	}
 
 	if (heroInt == 0) {
-		heroLink.href = 'pages/Dare-ye-Delve/index.html';
+		heroLink.href = 'pages/dare-ye-delve/index.html';
 		slide1.style.cssText = 'opacity: 1';
 		slide2.style.cssText = 'opacity: 0.3';
 	} else {
