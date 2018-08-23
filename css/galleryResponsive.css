@@ -45,7 +45,7 @@
 
 	.gallery-nav {
 		position: absolute;
-		top: 775px;
+		top: 820px;
 		left: 0;
 		right: 0;
 		margin: auto;
@@ -97,10 +97,6 @@
 
 	.info {
 		margin-bottom: 0.3em;
-	}
-
-	.gallery-nav {
-		top: 820px;
 	}
 }
 

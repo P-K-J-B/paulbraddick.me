@@ -1,0 +1,6 @@
+[submodule "pages/Dare-ye-Delve"]
+	path = pages/Dare-ye-Delve
+	url = https://github.com/P-K-J-B/Dare-ye-Delve
+[submodule "pages/memory-game"]
+	path = pages/memory-game
+	url = https://github.com/P-K-J-B/memory-game
