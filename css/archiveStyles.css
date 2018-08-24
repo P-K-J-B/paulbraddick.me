@@ -293,22 +293,30 @@ a {
 }
 
 .featured1 .ft-img {
-	background-image: url("../img/ft_1.jpg");
+	background-image: url("../img/dyd-hero-mob.jpg");
 }
 
 .featured2 .ft-img {
-	background-image: url("../img/ft_2.jpg");
+	background-image: url("../img/mtw-hero-mob.jpg");
 }
 
 .featured3 .ft-img {
-	background-image: url("../img/ft_3.jpg");
+	background-image: url("../img/ft_1.jpg");
 }
 
 .featured4 .ft-img {
-	background-image: url("../img/ft_4.jpg");
+	background-image: url("../img/ft_2.jpg");
 }
 
 .featured5 .ft-img {
+	background-image: url("../img/ft_3.jpg");
+}
+
+.featured6 .ft-img {
+	background-image: url("../img/ft_4.jpg");
+}
+
+.featured7 .ft-img {
 	background-image: url("../img/ft_5.jpg");
 }
 
