@@ -114,6 +114,19 @@ function carouselRight() {
 	ftArray.pop();
 }
 
+const throttle = (func, limit) => {
+  let inThrottle
+  return function() {
+    const args = arguments
+    const context = this
+    if (!inThrottle) {
+      func.apply(context, args)
+      inThrottle = true
+      setTimeout(() => inThrottle = false, limit)
+    }
+  }
+};
+
 ft2.addEventListener('click', function() {
 	const wellbeing = '<div class="popup-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/DCira0vgmoM?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
 	overlay.style.cssText = 'visibility: visible; opacity: 1; pointer-events: auto;'
@@ -165,19 +178,19 @@ window.addEventListener('resize', function() {
 	changeHero();
 });
 
-leftArrow.addEventListener('click', function() {
+leftArrow.addEventListener('click', throttle(function() {
 	if (isMob === false) {
 		carouselRight();
 		ftInt = 0;
 	}
-});
+}, 300));
 
-rightArrow.addEventListener('click', function() {
+rightArrow.addEventListener('click', throttle(function() {
 	if (isMob === false) {
 		carouselLeft();
 		ftInt = 0;
 	}
-});
+}, 300));
 
 bkg.addEventListener('click', function() {
 	overlay.style.cssText = 'visibility: hidden; opacity: 0; pointer-events: none;';
