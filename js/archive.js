@@ -15,8 +15,10 @@ const ft2 = document.querySelector('.featured2');
 const ft3 = document.querySelector('.featured3');
 const ft4 = document.querySelector('.featured4');
 const ft5 = document.querySelector('.featured5');
+const ft6 = document.querySelector('.featured6');
+const ft7 = document.querySelector('.featured7');
 
-ft2.addEventListener('click', function() {
+ft4.addEventListener('click', function() {
 	const wellbeing = '<div class="popup-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/DCira0vgmoM?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
 	overlay.style.cssText = 'visibility: visible; opacity: 1; pointer-events: auto;'
 	overlay.insertAdjacentHTML('beforeEnd', wellbeing);
@@ -24,14 +26,14 @@ ft2.addEventListener('click', function() {
 	document.body.style.cssText = 'overflow: hidden';
 });
 
-ft3.addEventListener('click', function() {
+ft5.addEventListener('click', function() {
 	const julie = '<div class="popup-img"><img src="../img/ft_3.jpg" alt=""></div>'
 	overlay.style.cssText = 'visibility: visible; opacity: 1; pointer-events: auto;'
 	overlay.insertAdjacentHTML('beforeEnd', julie);
 	document.body.style.cssText = 'overflow: hidden';
 })
 
-ft5.addEventListener('click', function() {
+ft7.addEventListener('click', function() {
 	const energyBurst = '<div class="popup-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/kFSOwNh0tMA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
 	overlay.style.cssText = 'visibility: visible; opacity: 1; pointer-events: auto;'
 	overlay.insertAdjacentHTML('beforeEnd', energyBurst);
